@@ -1,0 +1,10 @@
+.banner {
+  background-image: url("https://i.ibb.co/DfNgSBC/photo-1596461404969-9ae70f2830c1-ixlib-rb-4-0.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.text-title {
+  font-family: "Shrikhand", cursive; /* Use the 'Shrikhand' font */
+}

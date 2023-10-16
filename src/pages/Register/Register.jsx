@@ -1,7 +1,9 @@
 import React from "react";
-
 import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+
 const Register = () => {
+  const { register, updateUserData } = useContext(AuthContext);
   const [error, setError] = useState("");
   const handleRegister = (event) => {
     event.preventDefault();
@@ -12,10 +14,23 @@ const Register = () => {
     const password = form.password.value;
     const photoUrl = form.photo.value;
     console.log(username, password);
+
+    register(email, password)
+      .then((result) => {
+        const signeduser = result.user;
+        updateUserData({ displayName: username, photoURL: photoUrl })
+          .then((result) => {
+            // const updatedUser = result.user;
+            // console.log("updated", updatedUser);
+          })
+          .catch((error) => console.log(error));
+        console.log("registered", signeduser);
+      })
+      .catch((error) => console.log(error.message));
   };
 
   return (
-    <div className="bg-slate-400 flex justify-center items-center h-screen ">
+    <div className=" flex justify-center items-center h-screen ">
       <div className="w-full max-w-md">
         <form
           onSubmit={handleRegister}

@@ -1,0 +1,10 @@
+.bg-img {
+  background-image: url("https://i.ibb.co/VVGWzBt/Variuss-Round-04-generated.jpg");
+  /* background-size: cover; */
+  background-position: center;
+  /* height: 350px; */
+}
+
+.text-title {
+  font-family: "Shrikhand", cursive; /* Use the 'Shrikhand' font */
+}

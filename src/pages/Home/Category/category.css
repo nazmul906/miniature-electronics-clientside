@@ -1,0 +1,10 @@
+.cat-bg-img {
+  background-image: url("https://i.ibb.co/d6s9zhB/bg-1-ff8b4e77-377a-4fb4-93cf-8059513fb9f6-1512x.png");
+  background-size: cover;
+  background-position: center;
+  /* height: 500px; */
+}
+
+.text-title {
+  font-family: "Shrikhand", cursive; /* Use the 'Shrikhand' font */
+}
